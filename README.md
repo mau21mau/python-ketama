@@ -10,9 +10,12 @@ Implementation of Ketama consistent hash algorithm with Python
 3. **test.py**
     * Holds a simple test script that uses the CustomMemcacheClient. To run the test you just need to make sure that you have the memcache manager and python-memcached client module installed.
 
-To install the memcached and python-memcached run the following commands:
+To install the memcached and memcached run the following commands:
 
+memcached:
 > sudo apt-get install memcached
+
+python-memcached:
 > pip install python-memcached
 
 After install Memcached you just need to run the "test.py" on the terminal. If you want to specify the algorithm to test you have to pass it as parameter like this:
