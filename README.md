@@ -1,7 +1,11 @@
 python-ketama
 =============
 
-Implementation of Ketama consistent hash algorithm with Python
+This repo is an implementation example of Ketama consistent hash algorithm with Python, for the Python memcached client. This implementation aims to allow adding nodes of memcached server at runtime.
+If you want to understand a bit more about the issues around the consistent hashing, thesee are some good references:
+
+* [Tom White](http://www.tom-e-white.com/2007/11/consistent-hashing.html)
+* [The Simple Magic of Consistent Hashing](http://www.paperplanes.de/2011/12/9/the-magic-of-consistent-hashing.html)
 
 1. **custom_memcached.py**
     * Holds the implementation of a memcache.Client subclass called CustomMemcacheClient.
