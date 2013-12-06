@@ -1,4 +1,4 @@
-python-ketama implementation for memcached client.
+python-ketama for memcached client.
 =============
 
 This repo is an implementation example of Ketama consistent hash algorithm with Python, for the Python memcached client. This implementation aims to allow adding nodes of memcached server at runtime.
