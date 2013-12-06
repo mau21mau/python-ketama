@@ -1,4 +1,4 @@
-python-ketama
+python-ketama implementation for memcached client.
 =============
 
 This repo is an implementation example of Ketama consistent hash algorithm with Python, for the Python memcached client. This implementation aims to allow adding nodes of memcached server at runtime.
@@ -10,7 +10,7 @@ If you want to understand a bit more about the issues around the consistent hash
 1. **custom_memcached.py**
     * Holds the implementation of a memcache.Client subclass called CustomMemcacheClient.
 2. **consistent_hash.py**
-    * Holds the implementation of the consistent hash algorithm for ketama. The class is called HashRing and it is an adaptation from [Amir Salihefendic](http://amix.dk/blog/post/19367)
+    * Holds the implementation of the consistent hash algorithm for ketama. The class is called HashRing and it is an adaptation from [Amir Salihefendic](http://amix.dk/blog/post/19367).
 3. **test.py**
     * Holds a simple test script that uses the CustomMemcacheClient. To run the test you just need to make sure that you have the memcache manager and python-memcached client module installed.
 
