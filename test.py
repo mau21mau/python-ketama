@@ -1,7 +1,7 @@
 import random
 import string
 from sys import argv
-from custom_memcached import MemcacheClient
+from custom_memcached import CustomMemcacheClient
 
 def random_key(size):
     """ Generates a random key
@@ -80,5 +80,5 @@ if __name__ == '__main__':
     Init our subclass. The hash_algorithm paramether can be "modulo"<-
     (default) or "ketama" (the new one).
     """
-    client = MemcacheClient(servers=servers, hash_algorithm=algorithm)
+    client = CustomMemcacheClient(servers=servers, hash_algorithm=algorithm)
     run_consistent_hash_test(client)

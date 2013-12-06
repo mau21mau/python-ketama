@@ -4,7 +4,7 @@ import re
 import memcache
 from consistent_hash import HashRing
 
-class MemcacheClient(memcache.Client):
+class CustomMemcacheClient(memcache.Client):
     """ A memcache subclass. It currently allows you to add a new host at run
     time.
     """
@@ -12,7 +12,7 @@ class MemcacheClient(memcache.Client):
     hash_algorithm_index = 0
 
     def __init__(self, hash_algorithm='ketama', *args, **kwargs):
-        super(MemcacheClient, self).__init__(*args, **kwargs)
+        super(CustomMemcacheClient, self).__init__(*args, **kwargs)
 
         if hash_algorithm in self.available_algorithms:
             self.hash_algorithm_index = self.available_algorithms.index(
@@ -55,7 +55,7 @@ class MemcacheClient(memcache.Client):
             return None, None
 
         else:
-            return super(MemcacheClient, self)._get_server(key)
+            return super(CustomMemcacheClient, self)._get_server(key)
 
     def add_server(self, server):
         """ Adds a host at runtime to client
