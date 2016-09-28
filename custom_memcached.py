@@ -14,6 +14,9 @@ class CustomMemcacheClient(memcache.Client):
     def __init__(self, hash_algorithm='ketama', *args, **kwargs):
         super(CustomMemcacheClient, self).__init__(*args, **kwargs)
 
+
+        self.hash_algorithm = hash_algorithm
+
         if hash_algorithm in self.available_algorithms:
             self.hash_algorithm_index = self.available_algorithms.index(
                 hash_algorithm)
